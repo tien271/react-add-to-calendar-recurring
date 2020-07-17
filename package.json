@@ -2,7 +2,7 @@
   "author": "Tien Nguyen",
   "name": "react-add-to-calendar-recurring",
   "description": "A simple and reusable add to calendar button component for React",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "homepage": "https://tien271.github.io/react-add-to-calendar-recurring/",
   "repository": {

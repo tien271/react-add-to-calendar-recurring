@@ -96,7 +96,7 @@ export default class ReactAddToCalendar extends React.Component {
           currentItem === "outlook" || currentItem === "outlookcom"
             ? "windows"
             : currentItem;
-        icon = <i className={"fa fa-" + currentIcon} />;
+        icon = listItem.icon ? listItem.icon : <i className={"fa fa-" + currentIcon} />;
       }
 
       return (
@@ -112,7 +112,7 @@ export default class ReactAddToCalendar extends React.Component {
             target="_blank"
           >
             {icon}
-            {currentLabel}
+            {!self.props.iconOnly && currentLabel}
           </a>
         </li>
       );
@@ -175,12 +175,12 @@ export default class ReactAddToCalendar extends React.Component {
 
   render() {
     let options = null;
-    if (this.state.optionsOpen) {
+    if (this.props.hideButton || this.state.optionsOpen) {
       options = this.renderDropdown();
     }
 
     let addToCalendarBtn = null;
-    if (this.props.event) {
+    if (!this.props.hideButton && this.props.event) {
       addToCalendarBtn = this.renderButton();
     }
 
