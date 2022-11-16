@@ -644,6 +644,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            calendarUrl += "&recur=" + buildRecurringEvent();
 	          }
 
+	          calendarUrl += "&ctz=" + encodeURIComponent(event.timeZone);
 	          calendarUrl += "&location=" + encodeURIComponent(event.location);
 	          calendarUrl += "&text=" + encodeURIComponent(event.title);
 	          calendarUrl += "&details=" + encodeURIComponent(event.description);
